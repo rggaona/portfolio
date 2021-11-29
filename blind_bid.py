@@ -1,5 +1,5 @@
 from replit import clear
-from art import logo
+from art import logo_bid
 
 
 new_bidder = {}
