@@ -76,7 +76,7 @@ def compare(price):
         change = round((total - price), 2)
         check_resources(coffee_choice)
         resources["money"] += MENU[coffee_choice]["cost"]
-        return f"Here is ${change} in change"
+        return f"Here is ${change} in change\nHere is your {coffee_choice} ☕️. Enjoy!"
     elif total < price:
         return "Sorry, that's not enough money. Money refunded"
 
@@ -99,4 +99,3 @@ while continue_program:
             costumer_nickels = int(input("How many nickels?: "))
             costumer_pennies = int(input("How many pennies?: "))
             print(compare(MENU[coffee_choice]["cost"]))
-            print(f"Here is your {coffee_choice} ☕️. Enjoy!")
