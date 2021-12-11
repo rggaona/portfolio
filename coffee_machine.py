@@ -45,13 +45,8 @@ continue_program = True
 
 
 def check_resources(coffee):
-    if coffee == "espresso":
-        resources["water"] -= MENU[coffee]["ingredients"]["water"]
-        resources["coffee"] -= MENU[coffee]["ingredients"]["coffee"]
-    elif coffee == "latte" or coffee == "cappuccino":
-        resources["water"] -= MENU[coffee]["ingredients"]["water"]
-        resources["milk"] -= MENU[coffee]["ingredients"]["milk"]
-        resources["coffee"] -= MENU[coffee]["ingredients"]["coffee"]
+    for n in MENU[coffee]["ingredients"]:
+        resources[n] -= MENU[coffee]["ingredients"][n]
 
 
 def process_coin(quarters, dimes, nickels, pennies):
